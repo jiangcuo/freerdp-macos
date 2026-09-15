@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "target": {
+    "minimum_macos": "15.0",
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ]
+  },
+  "sources": {
+    "zlib": {
+      "repository": "https://github.com/madler/zlib.git",
+      "ref": "v1.3.2",
+      "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498"
+    },
+    "openssl": {
+      "repository": "https://github.com/openssl/openssl.git",
+      "ref": "openssl-3.5.8",
+      "commit": "f4dc4d58b48d346a8270183f89acf826d459b0ca"
+    },
+    "cjson": {
+      "repository": "https://github.com/DaveGamble/cJSON.git",
+      "ref": "v1.7.19",
+      "commit": "c859b25da02955fef659d658b8f324b5cde87be3"
+    },
+    "uriparser": {
+      "repository": "https://github.com/uriparser/uriparser.git",
+      "ref": "uriparser-1.0.2",
+      "commit": "9b2bed92f5deecf740819f9bf27724bee2fe9c12"
+    },
+    "openh264": {
+      "repository": "https://github.com/cisco/openh264.git",
+      "ref": "v2.6.0",
+      "commit": "652bdb7719f30b52b08e506645a7322ff1b2cc6f"
+    },
+    "opus": {
+      "repository": "https://github.com/xiph/opus.git",
+      "ref": "v1.6.1",
+      "commit": "22244de5a79bd1d6d623c32e72bf1954b56235be"
+    },
+    "libusb": {
+      "repository": "https://github.com/libusb/libusb-cmake.git",
+      "ref": "v1.0.30-0",
+      "commit": "c8477c10ac2ac6b1718d4d498e102b9f18b776f5",
+      "submodules": [
+        "libusb"
+      ]
+    },
+    "sdl": {
+      "repository": "https://github.com/libsdl-org/SDL.git",
+      "ref": "release-3.4.16",
+      "commit": "fa2c02bb6e21974a89ea9824bc53c9932abe5f9c"
+    },
+    "sdl_ttf": {
+      "repository": "https://github.com/libsdl-org/SDL_ttf.git",
+      "ref": "release-3.2.2",
+      "commit": "a1ce3670aec736ecbf0936c43f2f0cc53aa61e5b",
+      "submodules": [
+        "external/freetype",
+        "external/harfbuzz"
+      ]
+    },
+    "freerdp": {
+      "repository": "https://github.com/FreeRDP/FreeRDP.git",
+      "ref": "master",
+      "version": "3.31.2-dev0",
+      "commit": "f383eadb735a9069b90a5e4a49147d02ee95428d"
+    }
+  }
+}

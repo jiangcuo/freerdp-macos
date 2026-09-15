@@ -110,7 +110,8 @@ def build_sources(lock, sources, arch, jobs):
         ssl_stamp.write_text(ssl_config)
     run("make", f"-j{jobs}", "build_sw", cwd=ssl_build, env=env)
     run("make", "install_sw", cwd=ssl_build, env=env)
-    cmake("cjson", "-DENABLE_CJSON_TEST=OFF", "-DENABLE_CJSON_UTILS=OFF")
+    # cJSON 1.7.19 declares CMake 3.0; CMake 4 requires a policy floor of 3.5.
+    cmake("cjson", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", "-DENABLE_CJSON_TEST=OFF", "-DENABLE_CJSON_UTILS=OFF")
     cmake("uriparser", "-DURIPARSER_BUILD_DOCS=OFF", "-DURIPARSER_BUILD_TESTS=OFF", "-DURIPARSER_BUILD_TOOLS=OFF")
     cmake("opus", "-DOPUS_BUILD_SHARED_LIBRARY=ON", "-DOPUS_BUILD_TESTING=OFF", "-DOPUS_BUILD_PROGRAMS=OFF")
     cmake("libusb", "-DLIBUSB_BUILD_SHARED_LIBS=ON", "-DLIBUSB_BUILD_TESTING=OFF", "-DLIBUSB_BUILD_EXAMPLES=OFF")
